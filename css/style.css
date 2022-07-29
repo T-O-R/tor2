@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /*=====bg colors=====*/
+  --white: #eee;
+  --lightbrown: #F3EED9;
+  --brown: #824936;
+  --darkgreen: #222C2A;
+
+  /*=====colors=====*/
+  --lightbrown: #F3EED9;
+  --brown: #824936;
+
+  /*=====font size=====*/
+  --fs-H1: 3.75rem;
+  --fs-mob-H1: 3rem; /*mobile*/
+  --fs-H2: 2.25rem;
+  --fs-mob-H2: 2rem; /*mobile*/
+  --fs-P-reg: 1.3125rem;
+  --fs-P-lyt: 1.125rem;
+
+  /*=====font family=====
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Playfair Display', serif;
+  */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.tor {
+  color: var(--lightbrown);
+  text-shadow: 2px 2px 10px red;
+  animation: example 3s linear alternate-reverse infinite;
+}
+
+@keyframes example {
+  0% {text-shadow: 2px 2px 10px red;}
+  50% {text-shadow: 2px 2px 10px orange;}
+  100% {text-shadow: 2px 2px 10px darkyellow;}
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3em 0;
+}
+
+.intro {
+  background-color: var(--lightbrown);
+  min-height: 550px;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.intro__text {
+  font-size: var(--fs-P-reg);
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.intro__title {
+  font-size: var(--fs-mob-H1);
+  font-weight: 900;
+  margin-top: 0;
+}
+
+.section-dark--title {
+  color: var(--brown);
+}
+
+.section-light--title {
+  color: var(--lightbrown);
+}
+
+.section-title {
+  font-size: var(--fs-mob-H2);
+}
+
+.section-text {
+  font-size: var(--fs-P-lyt);
+  font-weight: 400;
+}
+
+.section-three {
+  background-color: var(--darkgreen);
+}
+
+.section-four {
+  background-color: var(--brown);
+}
+
+@media (min-width: 750px) {
+  .container {
+    padding: 5em 0;
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+  }
+
+  .intro__text {
+    letter-spacing: 8px;
+  }
+
+  .intro__title {
+    font-size: var(--fs-H1);
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .col + .col {
+    margin-left: 5em;
+  }
+
+  .section-title {
+    font-size: var(--fs-H2);
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .section-two h2 {
+    text-align: center;
+  }
+}
